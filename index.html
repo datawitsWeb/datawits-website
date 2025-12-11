@@ -99,7 +99,65 @@
 
     /* responsive */
     @media (max-width:640px){.hero h2{font-size:28px}.hero p{font-size:15px}.cards{padding:28px 18px}}
-  </style>
+.about-section {
+    padding: 80px 40px;
+    background: #f8f9fc;
+}
+.about-section {
+    padding: 100px 5%;
+
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* TEXT */
+.about-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-text h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #00b4d8;
+}
+
+/* IMAGE */
+.about-image {
+    flex: 1;
+    !display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+.about-image img {
+    width: 80%;
+    max-width: 300px;
+    !border-radius: 16px;
+    !box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+background: transparent;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+}
+
+
+</style>
 </head>
 <body>
   <header>
@@ -113,7 +171,6 @@
   <main>
     <section class="hero" id="home">
       <div class="blueprint-canvas" aria-hidden="true">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgAAAAQACAIAAACoEwUVAAAQAElEQVR4AeydB4AkVbX3770VO/eEzQsLKBkEBMkgQRARBVHggYgR" style="position:absolute;top:20%;left:50%;transform:translateX(-50%);opacity:0.18;width:420px;pointer-events:none;" alt="DataWits Watermark"/>
         <!-- SVG blueprint: grid, clouds, nodes, animated lines -->
         <svg class="blueprint" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
           <defs>
@@ -189,12 +246,29 @@
       </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="about-inner">
+
+<section id="about" class="about-section">
+    <div class="about-container">
+
+        <!-- LEFT: TEXT -->
+        <div class="about-text">
         <h3 style="color:var(--blue-700);text-align:center">About Us</h3>
-        <p style="max-width:980px;margin:14px auto;color:#334155;line-height:1.6">DataWits Pvt. Ltd. is a specialist data engineering firm built by Ab Initio experts who have led large-scale programs for global enterprises including Barclays, TransUnion, Airtel, OCBC Bank, ABSA Bank, CIMB Bank, and XL Axiata. We command the entire Ab Initio product suite—GDE, CoOperating System, Metadata Hub, EME, Conduct>It, Continuous Flows, Data Profiler, and Lineage tools—to design, optimize, and govern high-performance, mission-critical data ecosystems.</p>
-      </div>
-    </section>
+            <p style="max-width:980px;margin:14px auto;color:#334155;line-height:1.6">
+DataWits Pvt. Ltd. is a specialist data engineering firm built by Ab Initio experts who have led large-scale programs for global enterprises including Barclays, TransUnion, Airtel, OCBC Bank, ABSA Bank, CIMB Bank, and XL Axiata. 
+            </p>
+
+            <p style="max-width:980px;margin:14px auto;color:#334155;line-height:1.6">
+We command the entire Ab Initio product suite—GDE, CoOperating System, Metadata Hub, EME, Conduct>It, Continuous Flows, Data Profiler, and Lineage tools—to design, optimize, and govern high-performance, mission-critical data ecosystems.
+            </p>
+        </div>
+
+        <!-- RIGHT: IMAGE -->
+        <div class="about-image">
+            <img src="datawits_stack.PNG" alt="About DataWits">
+        </div>
+
+    </div>
+</section>
 
     <section id="services" class="cards">
       <article class="card" data-anim>
