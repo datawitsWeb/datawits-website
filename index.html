@@ -104,12 +104,17 @@
 <body>
   <header>
     <img src="logo.png" class="logo" alt="DataWits Logo" style="height:60px;object-fit:contain;"/>
+    .logo {
+    height: 60px;
+    object-fit: contain;
+    background: transparent; /* ensures no background is added */
+    image-rendering: auto;
+}
     <nav>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
-
   <main>
     <section class="hero" id="home">
       <div class="blueprint-canvas" aria-hidden="true">
@@ -244,7 +249,7 @@
     <section id="contact" class="contact" style="text-align:center">
       <h3 style="color:var(--blue-700)">Contact</h3>
       <div class="info" role="region" aria-label="Contact information">
-        <p>✉️ <a href="mailto:sales@datawits.io" style="color:var(--blue-700);text-decoration:none">sales@datawits.io</a></p>
+        <p>✉️ <a href="mailto:hello@datawits.io" style="color:var(--blue-700);text-decoration:none">hello@datawits.io</a></p>
         <p>🌐 <a href="https://www.datawits.io" target="_blank" rel="noreferrer" style="color:var(--blue-700);text-decoration:none">www.datawits.io</a></p>
       </div>
     </section>
